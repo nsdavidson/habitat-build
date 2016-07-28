@@ -19,7 +19,9 @@
 #
 # At this time we assume Ubuntu 15.04+ build nodes; these packages are
 # not available on earlier Ubuntu releases.
-execute('apt-get update') { ignore_failure true }
+execute('apt-get update') { ignore_failure true } if ubuntu?
+
+include_recipe 'yum-epel' if rhel?
 
 package ['xz-utils', 'shellcheck']
 

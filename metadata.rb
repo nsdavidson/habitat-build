@@ -6,6 +6,8 @@ version '0.8.0'
 
 depends 'delivery-sugar'
 depends 'delivery-truck'
+depends 'yum-epel'
+depends 'chef-sugar'
 
 gem 'habitat-client'
 
