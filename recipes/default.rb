@@ -19,6 +19,8 @@
 #
 # At this time we assume Ubuntu 15.04+ build nodes; these packages are
 # not available on earlier Ubuntu releases.
+include_recipe 'chef-sugar'
+
 execute('apt-get update') { ignore_failure true } if ubuntu?
 
 include_recipe 'yum-epel' if rhel?
