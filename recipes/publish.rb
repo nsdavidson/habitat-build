@@ -67,7 +67,7 @@ if habitat_depot_token?
       'HAB_AUTH_TOKEN' => depot_token
     )
     live_stream true
-    sensitive true
+    #sensitive true
   end
 end
 
