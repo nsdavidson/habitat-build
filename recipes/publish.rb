@@ -61,8 +61,8 @@ if changed_habitat_files?
       proj.save
 
       proj_data = {
-        'id' => build_version,
-        'version' => build_version,
+        'id' => last_build_env['pkg_relase'],
+        'version' => last_build_env['pkg_release'],
         'artifact' => last_build_env.merge('type' => 'hart'),
         'delivery_data' => node['delivery'],
       }
