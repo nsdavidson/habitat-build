@@ -29,7 +29,6 @@ if changed_habitat_files?
 
   # set local variables we're going to use in `lazy` properties later in
   # the chef run
-  build_version = nil
   project_name = node['delivery']['change']['project']
 
   # Only build and publish if we have a depot token
@@ -61,8 +60,8 @@ if changed_habitat_files?
       proj.save
 
       proj_data = {
-        'id' => last_build_env['pkg_relase'],
-        'version' => last_build_env['pkg_release'],
+        'id' => build_version,
+        'version' => build_version,
         'artifact' => last_build_env.merge('type' => 'hart'),
         'delivery_data' => node['delivery'],
       }
