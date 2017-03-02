@@ -70,7 +70,7 @@ end
 
 def changed_habitat_files?
   # `changed_files` comes from the delivery-sugar DSL: https://git.io/vXvAm
-  changed_files.select { |changed_file| changed_file =~ %r{habitat/} }.any?
+	true
 end
 
 private
